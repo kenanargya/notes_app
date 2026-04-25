@@ -15,8 +15,6 @@ Sebuah aplikasi manajemen catatan (*Notes App*) full-stack yang modern, cepat, d
 - **UI/UX yang Menarik:** Antarmuka pengguna bergaya modern dan elegan (*Light Mode*) menggunakan Next.js dan Tailwind CSS, dilengkapi animasi halus, *empty states*, dan *toast notifications*.
 - **Full API-Driven:** Backend bertindak murni sebagai RESTful API yang me-return JSON responses.
 
----
-
 ## Teknologi yang Digunakan
 
 - **Backend:** Laravel 12 (PHP) + MySQL
@@ -24,8 +22,6 @@ Sebuah aplikasi manajemen catatan (*Notes App*) full-stack yang modern, cepat, d
 - **Styling:** Tailwind CSS v4 & Vanilla CSS Tokens
 - **Autentikasi:** Laravel Sanctum
 - **HTTP Client:** Axios (dengan Interceptors untuk Auto-Auth)
-
----
 
 ## Panduan Instalasi & Menjalankan Aplikasi
 
@@ -76,8 +72,6 @@ npm run dev
 ```
 Frontend sekarang berjalan di `http://localhost:3000`.
 
----
-
 ## API Documentation (Endpoints)
 
 Semua endpoint di bawah ini (kecuali otentikasi) mewajibkan Header `Authorization: Bearer <token>` dan `Accept: application/json`.
@@ -94,5 +88,3 @@ Semua endpoint di bawah ini (kecuali otentikasi) mewajibkan Header `Authorizatio
 - `GET /api/notes/{id}` : Mengambil detail 1 catatan.
 - `PUT /api/notes/{id}` : Memperbarui catatan (params: `title`, `content`).
 - `DELETE /api/notes/{id}` : Menghapus catatan.
-
----
