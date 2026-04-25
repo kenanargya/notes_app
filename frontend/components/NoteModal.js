@@ -8,6 +8,7 @@ export default function NoteModal({ isOpen, onClose, onSubmit, note }) {
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const titleRef = useRef(null);
+  const textareaRef = useRef(null);
 
   const isEditing = !!note;
 
@@ -16,10 +17,22 @@ export default function NoteModal({ isOpen, onClose, onSubmit, note }) {
       setTitle(note?.title || "");
       setContent(note?.content || "");
       setErrors({});
-      // Focus title input when modal opens
-      setTimeout(() => titleRef.current?.focus(), 100);
+      // Focus title and auto-resize textarea
+      setTimeout(() => {
+        titleRef.current?.focus();
+        if (textareaRef.current) {
+          textareaRef.current.style.height = "auto";
+          textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+        }
+      }, 100);
     }
   }, [isOpen, note]);
+
+  const handleContentChange = (e) => {
+    setContent(e.target.value);
+    e.target.style.height = "auto";
+    e.target.style.height = `${e.target.scrollHeight}px`;
+  };
 
   const validate = () => {
     const newErrors = {};
@@ -106,12 +119,14 @@ export default function NoteModal({ isOpen, onClose, onSubmit, note }) {
               Content
             </label>
             <textarea
+              ref={textareaRef}
               id="note-content"
               value={content}
-              onChange={(e) => setContent(e.target.value)}
+              onChange={handleContentChange}
               className={`form-textarea ${errors.content ? "input-error" : ""}`}
               placeholder="Write your note content..."
-              rows={6}
+              rows={4}
+              style={{ minHeight: "120px", overflow: "hidden" }}
             />
             {errors.content && (
               <span className="form-error">{errors.content}</span>

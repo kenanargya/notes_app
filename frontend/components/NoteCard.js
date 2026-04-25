@@ -13,12 +13,20 @@ export default function NoteCard({ note, onEdit, onDelete, onDeleteRequest }) {
   };
 
   const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffInSeconds = Math.floor((now - date) / 1000);
+    
+    if (diffInSeconds < 60) return "Just now";
+    if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)} mins ago`;
+    if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)} hours ago`;
+    if (diffInSeconds < 172800) return "Yesterday";
+    if (diffInSeconds < 604800) return `${Math.floor(diffInSeconds / 86400)} days ago`;
+    
+    return date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
+      year: date.getFullYear() !== now.getFullYear() ? "numeric" : undefined,
     });
   };
 
