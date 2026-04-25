@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "NotesApp — Your Personal Notes",
+  title: "NotesApp – Your Personal Notes",
   description:
     "A clean, modern notes application to organize your thoughts and ideas.",
 };
