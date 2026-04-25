@@ -2,7 +2,7 @@
 
 Sebuah aplikasi manajemen catatan (*Notes App*) full-stack yang modern, cepat, dan responsif. Dibangun menggunakan arsitektur pemisahan backend dan frontend untuk performa yang optimal.
 
-## ✨ Fitur Utama (Requirements Terpenuhi)
+## Fitur Utama 
 
 ### Fitur Wajib:
 - **Lihat Catatan (Read):** Menampilkan daftar catatan dengan sistem grid yang rapi, lengkap dengan fitur pencarian (*search*).
@@ -17,7 +17,7 @@ Sebuah aplikasi manajemen catatan (*Notes App*) full-stack yang modern, cepat, d
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - **Backend:** Laravel 12 (PHP) + MySQL
 - **Frontend:** Next.js 16 (React App Router)
@@ -27,7 +27,7 @@ Sebuah aplikasi manajemen catatan (*Notes App*) full-stack yang modern, cepat, d
 
 ---
 
-## 🚀 Panduan Instalasi & Menjalankan Aplikasi
+## Panduan Instalasi & Menjalankan Aplikasi
 
 Aplikasi ini dibagi menjadi 2 folder utama: `backend` dan `frontend`. Keduanya harus dijalankan secara paralel.
 
@@ -78,7 +78,7 @@ Frontend sekarang berjalan di `http://localhost:3000`.
 
 ---
 
-## 📚 API Documentation (Endpoints)
+## API Documentation (Endpoints)
 
 Semua endpoint di bawah ini (kecuali otentikasi) mewajibkan Header `Authorization: Bearer <token>` dan `Accept: application/json`.
 
@@ -96,5 +96,3 @@ Semua endpoint di bawah ini (kecuali otentikasi) mewajibkan Header `Authorizatio
 - `DELETE /api/notes/{id}` : Menghapus catatan.
 
 ---
-
-*Dikembangkan untuk menyelesaikan tugas pengembangan Ebyb Notes App.*
