@@ -1,10 +1,10 @@
-# 📝 Notes API — Laravel Backend
+# Notes API - Laravel Backend
 
 A clean, production-ready RESTful API for a Notes application built with **Laravel 12** and **Laravel Sanctum** authentication.
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - **Framework:** Laravel 12
 - **Authentication:** Laravel Sanctum (token-based)
@@ -14,7 +14,7 @@ A clean, production-ready RESTful API for a Notes application built with **Larav
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -140,7 +140,7 @@ The API will be available at **http://localhost:8000**
 
 ---
 
-## 🔌 API Documentation
+## API Documentation
 
 ### Base URL
 ```
@@ -333,7 +333,7 @@ DELETE /api/notes/{id}
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 | Variable                 | Description                | Default              |
 |--------------------------|----------------------------|----------------------|
@@ -353,7 +353,7 @@ DELETE /api/notes/{id}
 
 ---
 
-## 🌐 Deployment (Railway/Render)
+## Deployment (Railway/Render)
 
 1. Push the `backend/` folder to a Git repository
 2. Set environment variables on your deployment platform
@@ -363,7 +363,7 @@ DELETE /api/notes/{id}
 
 ---
 
-## 📋 Quick Test with cURL
+## Quick Test with cURL
 
 ```bash
 # Register
