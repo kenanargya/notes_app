@@ -132,6 +132,12 @@ export default function HomePage() {
     setDeleteTarget(null);
   };
 
+  useEffect(() => {
+    if (!authLoading && !user) {
+      router.push("/login");
+    }
+  }, [user, authLoading, router]);
+
   if (authLoading || (!user && !authLoading)) {
     return (
       <div className="page-wrapper">
