@@ -1,4 +1,4 @@
-# Ebyb Notes App
+# Notes App
 
 Sebuah aplikasi manajemen catatan (*Notes App*) full-stack yang modern, cepat, dan responsif. Dibangun menggunakan arsitektur pemisahan backend dan frontend untuk performa yang optimal.
 
