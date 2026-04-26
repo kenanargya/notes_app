@@ -17,6 +17,7 @@ return [
 
     'allowed_origins' => [
         env('FRONTEND_URL', 'http://localhost:3000'),
+        'https://notes-app-iota-lake.vercel.app'
     ],
 
     'allowed_origins_patterns' => [],
